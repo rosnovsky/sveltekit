@@ -13,6 +13,16 @@ const config = {
 		// specifying a different adapter
 		//adapter: node(),
 		adapter: vercel(),
+		hydrate: true,
+		ssr: true,
+		prerender: {
+			crawl: true,
+			enabled: true,
+			entries: ['*'],
+			onError: 'fail'
+		},
+		router: true,
+			
 
 		// Comment the paths if wants to run in dev mode.
 // 		paths: {
